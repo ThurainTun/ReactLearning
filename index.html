@@ -24,14 +24,28 @@
 </body>
 
 <script type="text/babel">
-    const Main = () => {
-        return <div>Hwllo World this is footer</div>
+
+    let name ="nay thurain tun";
+    let age = 19;
+    let className = 'change-class-name';
+    let clickHandler = ()=>{
+        alert('hello world');
     }
 
-    let rootContainer=document.getElementById('main');
+    const Main = () => {
+        return (
+            <div className={className}>
+                <h4>{name}</h4>
+                <p>{age}</p>
+                <button onClick={clickHandler}>Click</button>
+            </div>
+        )
+    }
+
+    let rootContainer = document.getElementById('main');
 
     // react element
-    let element=React.createElement;
+    let element = React.createElement;
 
     //create react root element
     let root = ReactDOM.createRoot(rootContainer);
